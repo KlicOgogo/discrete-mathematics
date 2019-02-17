@@ -1,0 +1,101 @@
+\documentclass[12pt, a4paper]{extarticle}
+\pagenumbering{gobble}
+\usepackage{geometry}
+ \geometry{
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+
+\usepackage{titlesec}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+\titleformat{\subsection}[block]{\large\bfseries\filright}{}{1em}{}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+
+\usepackage[normalem]{ulem}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{amssymb,amsfonts,amsmath,cite,enumerate,float,indentfirst}
+\usepackage{mathrsfs}
+\usepackage{comment}
+\usepackage{verbatim}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage{wrapfig}
+\usepackage{mathtext} %cyrillic text in math mode, not recommended
+\usepackage{amsthm}
+
+\hypersetup{				
+	unicode=true,           
+	pdfkeywords={keyword1} {key2} {key3},
+	colorlinks=true, 
+	urlcolor=red
+}
+
+\captionsetup[table]{justification=centering, singlelinecheck=false, font=large}
+\makeatletter
+\renewcommand{\fnum@table}{}
+\makeatother
+
+\setlength{\parindent}{1.3em}
+\setlength{\parskip}{10pt}
+\usepackage{setspace}
+\usepackage{enumitem}
+\setlist[itemize]{topsep=0pt,partopsep=1ex,parsep=1ex}
+\begin{document}
+	\section{Дыскрэтная матэматыка}
+	Практычныя заняткі на беларускай мове для 9-11 груп першага курса. 	\subsection{Пары:}
+	\begin{itemize}
+		\item Рашэнне задач (максімум 13 пар); \\[6pt]
+		\textbf{Q:} Як гэта будзе адбывацца? \\
+		\textbf{A:} Я буду скідваць (хутчэй за ўсё ў спецыяльны чацік) файл з задачамі на дзвюх мовах, частка з якіх будзе прарашана на занятку. Выкарыстанне беларускай мовы ўхваляецца, але неабавязкова. Для лепшага пагружэння ў беларускую мову заведзены (у працэсе) слоўнікі невідавочных тэрмінаў і іншых слоў.
+		\item 4 кантрольныя (2-4 пары); \\[6pt]
+		\textbf{Q:} Чым можна карыстацца? \\
+		\textbf{A:} Любой папяровай крыніцай, акрамя прарашанай ужо кантрольнай. .\noindent\rule{0.5cm}{0.4pt}. \\[6pt]
+		\textbf{Q:} Што будзе, калі спаліцца за спісваннем? \\
+		\textbf{A:} Згаранне абсалютна ўсіх бонусаў незалежна ад таго, калі яны былі зароблены. 
+		\item Сістэма кантроля версій git для імбрыкаў (1 пара, па жаданні); \\[6pt]
+		\textbf{Q:} Навошта мне git? \\
+		\textbf{A:} З дапамогай git можна пісаць любы код як белы чалавек.
+		\item Кампутарная вёрстка з дапамогай \LaTeX~для імбрыкаў (1 пара для ўсіх падгруп, па жаданні); \\[6pt]
+		\textbf{Q:} Навошта мне \LaTeX? \\
+		\textbf{A:} Каб перасесці з іглы Microsoft Office на прыгожыя pdf-кі без попаболю.
+		\item Дадатковыя заняткі для тых, каму цяжкавата (колькі спатрэбіцца).
+	\end{itemize}
+
+	\subsection{Кантроль ведаў:}
+	4 адзнакі за кантрольныя, якія я дасылаю Алегу Іванавічу, які ставіць залік. Кожная адзнака складаецца з трох частак: 
+	\begin{itemize}
+		\item Сама кантрольная;
+		\item <<бал>> за праверку работы аднагрупніка($\in [-1, 1]$); \\[6pt]
+		\textbf{Q:} Навошта правяраць адзін аднаго? \\
+		\textbf{A:} Па-першае, гэта не самы бессэнсоўны навык, па-другое, калі пашанцуе, па рабоце аднагрупніка можна разабраць заданні, калі сам не справіўся, па-трэцяе, мне будзе прасцей, што пазітыўна скажацца на ўсім астатнім, што ўваходзіць у курс.
+		\item Бонус за <<лабу>> (далей без двукоссяў).
+	\end{itemize}
+	
+	\subsection{Q: Што яшчэ за лаба?}
+	{\large A:} Аформленыя задачы аднаго з практычных заняткаў, які быў перад кантрольнай. <<Выдаецца>> на тым самым занятку, гэта значыць, што трэба прыйсці на пару (адзіны момант, дзе мяне цікавяць наведванні). Бонус да кантрольнай залежыць ад наступных умоў:
+	\begin{itemize}
+		\item Колькі ўсяго часу было на афармленне (колькасць тыдняў паміж заняткам і кантрольнай)?
+		\item Наколькі складаныя задачы?
+		\item Ці выкарыстоўваўся \LaTeX, і наколькі якасным атрымаўся выніковы дакумент, калі так?
+		\item Наколькі складаней аформіць pdf, чым напісаць ад рукі?
+		\item Ці выкарыстоўваўся git? Калі так, то самастойна ці ў групе з кімсьці? Ці ёсць сэнс з выкарыстання git, якое атрымалася?
+		\item Колькі атрымалася рашыць і рашыць правільна, а таксама самастойна? Наколькі граматна і падрабязна аформлена рашэнне (занадта падрабязна не трэба)? \\[6pt]
+		\textbf{Q:} Як будзе карацца плагіят? \\
+		\textbf{A:} Жэстачайшэ))) За $\approx$ лабы адзнака падзеліцца пароўну на ўсіх. Лепш шчыра сказаць, што рабілі разам. 
+		\item Нешта яшчэ, што я ўпусціў.
+	\end{itemize}
+
+	Спадзяюся, за бліжэйшы час я даведаюся, калі будуць кантрольныя, тады і змагу прыблізна ацаніць усе лабы. 
+	
+	\textbf{Раю пакрыць усе заняткі, каб потым можна было па лабах рыхтавацца да экзамену.}
+	
+	\textit{Гэты файл будзе папаўняцца адказамі на іншыя важныя пытанні, выпраўляцца, калі нешта з заўваг і прапаноў ажыццявіцца, усё гэта (здаецца, ананімна) пісаць \href{https://docs.google.com/document/d/1La38_lqT7PtdRVmlvKIVh_7rIWvHqPBFG7yrWFoKkFM/edit?usp=sharing}{сюды}.}
+\end{document}
