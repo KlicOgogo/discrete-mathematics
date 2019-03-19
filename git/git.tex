@@ -1,0 +1,83 @@
+\documentclass[12pt, a4paper]{extarticle}
+\pagenumbering{gobble}
+\usepackage{geometry}
+ \geometry{
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+
+\usepackage{titlesec}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+\titleformat{\subsection}[block]{\large\bfseries\filcenter}{}{1em}{}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+
+\usepackage[normalem]{ulem}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{amssymb,amsfonts,amsmath,cite,enumerate,float,indentfirst}
+\usepackage{mathrsfs}
+\usepackage{comment}
+\usepackage{verbatim}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage{wrapfig}
+\usepackage{mathtext} %cyrillic text in math mode, not recommended
+\usepackage{amsthm}
+
+\hypersetup{				
+	unicode=true,           
+	pdfkeywords={keyword1} {key2} {key3},
+	colorlinks=true, 
+	urlcolor=blue
+}
+
+\captionsetup[table]{justification=centering, singlelinecheck=false, font=large}
+\makeatletter
+\renewcommand{\fnum@table}{}
+\makeatother
+
+\newcommand{\formQA}[2]{%
+	\noindent \textbf{Q:} #1 \\
+	\textbf{A:} #2
+}
+
+\setlength{\parindent}{1.3em}
+\setlength{\parskip}{10pt}
+\usepackage{setspace}
+\usepackage{enumitem}
+\setlist[itemize]{topsep=0pt,partopsep=1ex,parsep=1ex}
+
+\begin{document}
+
+\section{git з github для імбрыкаў}
+
+У гэтым доку будуць інструкцыя па наладжванню акаўнта на \href{https://github.com/}{github.com}, паслядоўнасць крокаў для стварэння там свайго рэпазіторыя, унутры якога можна карыстацца сродкамі git, а таксама базавыя каманды git і іншыя карысныя штукі. Для таго, каб усталяваць git на свой кампукцер, ёсць \href{https://git-scm.com/book/en/v2/Getting-Started-Installing-Git}{старонка} з інструкцыяй для кожнай аперацыйнай сістэмы.
+
+На самай справе можна закрыць гэты док і знайсці нешта ў інтэрнэце, напрыклад \href{https://habr.com/ru/post/125799/}{гэта} (рэкамендую чытаць разам з каментамі), \href{https://www.tutorialspoint.com/git/index.htm}{гэта} ці \href{https://githowto.com}{гэта}.
+
+\subsection{Акаўнт на github.com}
+
+\begin{itemize}
+
+\item Ствараем акаўнт: заходзім на сайт, клікаем на адну з кнопак \textbf{Sign up}, выконваем усе, што просяць.
+
+\item Пасля стварэння акаўнта github.com/<username> будзе дамашняй старонкай.
+
+\item Для бяспечнага карыстання рэкамендуецца наладзіць злучэнне з github па ssh. Ёсць добрая \href{https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent}{інструкцыя} для ўсіх асноўных аперацыйных сістэм. Каб праверыць, што злучэнне наладжана, трэба выканаць адну каманду ў кансолі, чытаць \href{https://help.github.com/en/articles/testing-your-ssh-connection}{тут}.
+
+\end{itemize}
+
+\subsection{git lfs}
+
+Адны класныя дзядзечкі прыдумалі сродак, каб не мяшаць код і здаровыя і не вельмі бінарныя файлы ў адну кучу (то-бок можна падцягнуць з сервераў толькі код калі патрэбы ў астатнім няма ці трэба пампаваць вельмі шмат, а інтэрнэт не дазваляе па адной з прычын). Вельмі проста ўсталяваць, вельмі проста карыстацца, абы толькі не лагала. .-.
+
+Інструкцыя па ўсталёўцы і наладжванні \href{https://github.com/git-lfs/git-lfs}{тут}. Толькі рэкамендую каманду \textbf{git lfs install --skip-smudge} замест \textbf{git lfs install}, каб можна было самастойна кіраваць зацягваннем вялікіх файлаў. 
+
+\end{document}
