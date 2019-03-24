@@ -30,6 +30,7 @@
 \usepackage{wrapfig}
 \usepackage{mathtext} %cyrillic text in math mode, not recommended
 \usepackage{amsthm}
+\usepackage{graphicx}
 
 \hypersetup{				
 	unicode=true,           
@@ -43,6 +44,22 @@
 \renewcommand{\fnum@table}{}
 \makeatother
 
+\captionsetup[figure]{labelfont=bf, justification=centering}
+
+% figure captions settings
+\renewcommand\thefigure{\thesection.\arabic{figure}}  
+\makeatletter
+\renewcommand{\fnum@figure}{Малюнак \thefigure}
+\makeatother
+
+% table captions settings
+\renewcommand\thetable{\thesection.\arabic{table}}  
+\makeatletter
+\renewcommand{\fnum@table}{Табліца \thetable}
+\makeatother
+
+
+
 \newcommand{\formQA}[2]{%
 	\noindent \textbf{Q:} #1 \\
 	\textbf{A:} #2
@@ -53,6 +70,8 @@
 \usepackage{setspace}
 \usepackage{enumitem}
 \setlist[itemize]{topsep=0pt,partopsep=1ex,parsep=1ex}
+
+\graphicspath{{images/}}
 
 \begin{document}
 
@@ -78,6 +97,40 @@
 
 Адны класныя дзядзечкі прыдумалі сродак, каб не мяшаць код і здаровыя і не вельмі бінарныя файлы ў адну кучу (то-бок можна падцягнуць з сервераў толькі код калі патрэбы ў астатнім няма ці трэба пампаваць вельмі шмат, а інтэрнэт не дазваляе па адной з прычын). Вельмі проста ўсталяваць, вельмі проста карыстацца, абы толькі не лагала. .-.
 
-Інструкцыя па ўсталёўцы і наладжванні \href{https://github.com/git-lfs/git-lfs}{тут}. Толькі рэкамендую каманду \textbf{git lfs install --skip-smudge} замест \textbf{git lfs install}, каб можна было самастойна кіраваць зацягваннем вялікіх файлаў. 
+Інструкцыя па ўсталёўцы і наладжванні \href{https://github.com/git-lfs/git-lfs}{тут}. Толькі рэкамендую каманду \textbf{git lfs install -\hspace{1pt}-skip-smudge} замест \textbf{git lfs install}, каб можна было самастойна кіраваць зацягваннем вялікіх файлаў (\textbf{git lfs pull}). 
+
+\subsection{Стварэнне і налады рэпазіторыя}
+
+Каб стварыць свой рэпазіторый на github.com, трэба зайсці на старонку свайго профіля і клікнуць <<+>> у правым верхнім куце (неяк няёмка прыкладваць скрыншот), абраць <<New repository>> і наладзіць. Рэкамендую дадаваць README і .gitignore. README пішацца на \href{https://en.wikipedia.org/wiki/Markdown}{Markdown} і дазваляе эфектна апісаць, для чаго рэпазіторый быў створаны і як карыстацца тым, што там знаходзіцца. Таксама github дазваляе з гэтага файла стварыць прыгожую дамашнюю старонку нібыта сайта вашага рэпазіторыя. .gitignore "--- гэта файл, у якім апісваецца ўсё, што не будзе загружацца на копію рэпазіторыя на серверы. Напрыклад, калі пісаць праект на старой Microsoft Visual Studio (не магу сцвярджаць пра новыя версіі), кожны праект змяшчае, апрача файлаў з кодам, кучу аўтаматычна створаных іншых файлаў (.sln), якія нікуды не трэба заліваць. 
+
+Калі трэба працаваць не са сваім кодам, а з чужым, які мае свой рэпазіторый на github, можна стварыць сваю копію і працаваць з ёй, для гэтага трэба зайсці на рэпазіторый і тыкнуць на <<fork>> (малюнак \ref{fork}).
+
+\begin{figure}[H]
+
+\begin{center}
+\includegraphics[width=\textwidth]{fork.png}
+\end{center}
+
+\caption{Копія чужога рэпазіторыя} \label{fork}
+\end{figure}
+
+Пасля таго, як рэпазіторый быў створаны, трёба наладзіць яго ў сябе. Па-першае, трэба зацягнуць копію з github, для гэтага трэба адкрыць кансоль (git bash) і выканаць каманду \textbf{git clone <repo url>}, дзе <repo url> "--- спасылка, якую выдае github, калі на старонцы рэпкі клікнуць <<Clone or download>> (малюнак \ref{clone}).
+
+\begin{figure}[H]
+
+\begin{center}
+	\includegraphics[width=\textwidth]{clone.png}
+\end{center}
+
+\caption{Спасылка для git clone} \label{clone}
+\end{figure}
+
+Пасля таго, як копія з'явілася на вашым кампе, трэба прапісаць у наладах электронны адрас і імя, якія будуць выкарыстоўвацца для подпісу камітаў (што гэта такое, будзе потым). Гэта можна зрабіць глабальна альбо ў межах рэпазіторыя, у якім вы знаходзіцеся (каманда \textbf{pwd} скажа, у якой папцы вы знаходзіцеся ў тэрмінале (git bash)). Усе патрэбныя каманды ёсць \href{https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration}{тут} (каб наладзіць лакальна, трэба прыбраць \textbf{-\hspace{1pt}-global}). Яшчэ можна чытануць \href{https://help.github.com/en/articles/about-commit-email-addresses}{гэта}.
+
+Пасля выканання гэтых крокаў можна наладжваць git lfs. 
+
+\subsection{Аддаленыя серверы}
+
+Без разумення прынцыпаў узаемадзеяння лакальнай копіі і копіі на github будзе складана свядома працаваць з git. Лепшы \href{https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes}{артыкул} (ёсць рускамоўны варыянт, пераклад на беларускую мову абяцаюць), каб разабрацца. Няма нічога лепш, чым рукамі памацаць, галоўнае, нічога сабе толькі не паламаць (патрэніравацца на нейкім тэставым рэпазіторыі), можна завесці два экзэмпляры, каб разабрацца з upstream і origin. 
 
 \end{document}
