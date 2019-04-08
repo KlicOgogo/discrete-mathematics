@@ -1,64 +1,10 @@
-\documentclass[12pt, a4paper]{extarticle}
-\pagenumbering{gobble}
-\usepackage{geometry}
- \geometry{
- left=20mm,
- right=20mm,
- top=20mm,
- bottom=20mm,
- }
-
-\usepackage{titlesec}
-\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
-\titleformat{\subsection}[block]{\large\bfseries\filcenter}{}{1em}{}
-\usepackage[utf8]{inputenc}
-\usepackage[english, russian]{babel}
-
-\usepackage[normalem]{ulem}
-\usepackage{soul}
-\usepackage{verbatim}
-\usepackage{tabularx}
-\usepackage{tabulary}
-\usepackage{hyperref}
-\usepackage{setspace}
-\usepackage{amssymb,amsfonts,amsmath,cite,enumerate,float,indentfirst}
-\usepackage{mathrsfs}
-\usepackage{comment}
-\usepackage{verbatim}
-\usepackage{mathtools}
-\usepackage{caption}
-\usepackage{wrapfig}
-\usepackage{mathtext} %cyrillic text in math mode, not recommended
-\usepackage{amsthm}
-
-\hypersetup{				
-	unicode=true,           
-	pdfkeywords={keyword1} {key2} {key3},
-	colorlinks=true, 
-	urlcolor=blue
-}
-
-\captionsetup[table]{justification=centering, singlelinecheck=false, font=large}
-\makeatletter
-\renewcommand{\fnum@table}{}
-\makeatother
-
-\newcommand{\formQA}[2]{%
-	\noindent \textbf{Q:} #1 \\
-	\textbf{A:} #2
-}
-
-\setlength{\parindent}{1.3em}
-\setlength{\parskip}{10pt}
-\usepackage{setspace}
-\usepackage{enumitem}
-\setlist[itemize]{topsep=0pt,partopsep=1ex,parsep=1ex}
+\input{../common/preamble}
 
 \begin{document}
 	\section{Яшчэ адно апісанне таго, што я назваў лабай}
 	
 	Больш бессістэмнасці богу бессістэмнасці!!! Разбалоўкі па задачах не будзе, толькі максімальны бал, калі можна атрымаць за ўсе задачы. Нагадваю, што НІКОМУ, нават мне, невядома, як атрыманы бал будзе пераўтвораны ў выніковую адзнаку. Формулу падліку адзнакі па лабе можна апісаць прыблізна так:
-	$$G = (a_i + b_i + c_i)  \cdot  d,$$ дзе $a_i$ "--- каэфіцыент за афармленне <<простых смяротных>>, $a_i = A_i$ ; $b_i$ "--- каэфіцыент за якасць выкарыстання \LaTeX, $b_i \in [0, B_i]$; $c_i$ "--- каэфіцыент за якасць выкарыстання git, $c_i \in [0, C_i]$; $i$ "--- нумар ЗДАДЗЕННАЙ лабы, $d$ "--- сума балаў за правільна зробленыя заданні, $d \in [0, \sum]$, дзе $\sum$ "--- максімальны бал лабы, указаны ў табліцы. Для гэтых каэфіцыентаў  справядлівыя наступныя законы:
+	$$G = (a_i + b_i + c_i)  \cdot  d,$$ дзе $a_i$ "--- каэфіцыент за афармленне <<простых смяротных>>, $a_i = A_i$ ; $b_i$ "--- каэфіцыент за якасць выкарыстання \LaTeX, $b_i \in [0, B_i]$; $c_i$ "--- каэфіцыент за якасць выкарыстання git, $c_i \in [0, C_i]$; $i$ "--- нумар ЗДАДЗЕННАЙ лабы, $d$ "--- сума балаў за правільна зробленыя заданні, $d \in [0, \sum]$, дзе $\sum$ "--- максімальны бал лабы, указаны ў табліцы. Для гэтых каэфіцыентаў справядлівыя наступныя законы:
 	\begin{equation*}
 			\begin{aligned}
 				a_i + b_i + c_i & \leqslant 1 \\	
