@@ -6,11 +6,11 @@ Discrete mathematics course repo.
 
 - course description
 
-- vocabularies (rus-bel and bel-rus)
-
 - grading tables for each group
 
 - files with problems
+
+- git and latex guides
 
 - other docs
 
