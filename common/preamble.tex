@@ -1,13 +1,7 @@
-\pagenumbering{gobble}
 \usepackage{geometry}
-\geometry{left=20mm, right=10mm, top=20mm, bottom=20mm}
-
 \usepackage{titlesec}
-\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
-\titleformat{\subsection}[block]{\large\bfseries\filcenter}{}{1em}{}
 \usepackage[utf8]{inputenc}
 \usepackage[english, russian]{babel}
-
 \usepackage[normalem]{ulem}
 \usepackage{soul}
 \usepackage{verbatim}
@@ -25,6 +19,16 @@
 \usepackage{mathtext} %cyrillic text in math mode, not recommended
 \usepackage{amsthm}
 \usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage[table]{xcolor}
+
+\geometry{left=20mm, right=10mm, top=20mm, bottom=20mm}
+
+\setlist[itemize]{topsep=0pt,partopsep=1ex,parsep=1ex}
+
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+\titleformat{\subsection}[block]{\large\bfseries\filcenter}{}{1em}{}
 
 \hypersetup{				
 	unicode=true,           
@@ -34,36 +38,28 @@
 	linkcolor=black
 }
 
-\captionsetup[table]{justification=centering, singlelinecheck=false, font=large}
-\makeatletter
-\renewcommand{\fnum@table}{}
-\makeatother
-
-\captionsetup[figure]{labelfont=bf, justification=centering}
+\setlength{\parindent}{1.3em}
+\setlength{\parskip}{10pt}
+\pagenumbering{gobble}
 
 % figure captions settings
+\captionsetup[figure]{labelfont=bf, justification=centering}
 \renewcommand\thefigure{\thesection.\arabic{figure}}  
 \makeatletter
 \renewcommand{\fnum@figure}{Малюнак \thefigure}
 \makeatother
 
 % table captions settings
+\captionsetup[table]{justification=centering, singlelinecheck=false, font=large}
+\makeatletter
+\renewcommand{\fnum@table}{}
+\makeatother
 \renewcommand\thetable{\thesection.\arabic{table}}  
 \makeatletter
 \renewcommand{\fnum@table}{Табліца \thetable}
 \makeatother
 
-
-
 \newcommand{\formQA}[2]{%
 	\noindent \textbf{Q:} #1 \\
 	\textbf{A:} #2
 }
-
-\setlength{\parindent}{1.3em}
-\setlength{\parskip}{10pt}
-\usepackage{setspace}
-\usepackage{enumitem}
-\setlist[itemize]{topsep=0pt,partopsep=1ex,parsep=1ex}
-
-\usepackage[table]{xcolor}
