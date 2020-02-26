@@ -1,0 +1,18 @@
+\documentclass[12pt,twoside]{article}
+\usepackage{import}
+
+\subimport{../common/}{preamble}
+\begin{document}
+    \noindent \textbf{Задача}: рашыць раўнанне
+    \begin{equation} \label{eq1}
+    \sum _{i=1} ^k x_i = n,\ x_i \ge 1.
+    \end{equation}
+    
+    \noindent \textbf{Рашэнне:} \\
+    1) Звесці задачу да задачы выгляду: 
+    \begin{equation} \label{eq2}
+    \sum _{i=1} ^k x_i = n,\ x_i \ge 0.
+    \end{equation}
+    Для гэтага трэба зрабіць замену $y_i=x_i-1$. \\
+    2) Рашыць атрыманую задачу. Будзем лічыць, што лікі $x_i$ "--- гэта <<карзіны>>, у якія кладуцца адзінкі. Калі мы па $x_i$ размяркуем $n$ адзінак, атрымаецца рашэнне раўнання \eqref{eq2}. Таму колькасць рашэнняў раўнання \eqref{eq2} "--- гэта колькасць спосабаў размеркаваць $n$ элементаў у $k$ адрозных карзін з паўтарэннямі, а гэта роўна $\overline{C_n ^k}$, адпаведна, колькасць рашэнняў раўнання \eqref{eq1} "--- $\overline{C_{n-k} ^k}$.
+\end{document}
